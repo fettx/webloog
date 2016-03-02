@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Resource of @Tinix</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  </head>
+  <body>
+    
+    <div class="container">
+     </br>
+     </br>
+     <% flash.each do |name , msg| %>
+       <div class="alert alert-success" role="alert">
+	 
+       </div>
+     <% end %>
+ 
+    <div class="container-fluid">
+     <div class="row-fluid">
+     <div class="col-md-3">
+    
+
+   
+   <h4><%= link_to "HOME", href="/"%></h4>
+   <h4>PROGRAMMING</h4>
+   <h4><%= link_to "about", href="/about/index"%></h4>
+     </br>
+     <p>Degree in Computer Science FaMAF UNC, Writer Software, Math Fan, Ruby, Rails, Emacs, and Mate taker Working at freelance and loving it!</p>
+     </br>
+     <a href="https://twitter.com/tinix" class="twitter-follow-button" data-show-count="true" data-lang="es">Seguir @Tinix</a><br/><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+     </br>
+     <p> © 2003-2014 Daniel Tinivella Guzman. All rights reserved.
+       dtinivella.com.ar is powered by RubyonRails and Disqus.</p>
+     </div>
+     <div class="col-md-9"> <%= yield %></div> 
+    </div>
+    </div>
+</div> 
+
+<!-- begin code of disqus -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'resourcetinix'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    <!-- finished code of disqus -->
+  </body>
+</html>

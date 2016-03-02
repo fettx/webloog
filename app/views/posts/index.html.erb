@@ -1,0 +1,23 @@
+<font style="font-size:4em;"><big><%= @title %></big>
+</br></font>
+<h1><%= @title %></h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+  <h2><%= link_to post.title, post %></h2>
+  <div class="info"></br>
+    <h4> by <%=post.author %></h4>
+  </div>
+
+  <div class="body"><%= post.body %></div><br>
+  <div class="field"> <br />
+    <%= image_tag post.avatar.url %>
+    
+  </div>
+  <div class="created_at">
+    <%=post.created_at%></div>
+</br>
+
+<% end -%>
+
+<%= link_to 'New Post', new_post_path %>

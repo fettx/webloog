@@ -1,0 +1,7 @@
+class Post < ActiveRecord::Base
+  validates_presence_of :title, :body, :tags, :author, :created_at
+  
+  def long_title
+    "#{title} - #{published_at}"
+  end
+end

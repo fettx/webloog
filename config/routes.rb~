@@ -1,0 +1,17 @@
+Rails.application.routes.draw do
+  
+  # get 'scaffold/about'
+ # get 'scaffold/about' => 'scaffold#index'
+  # get 'scaffold/title:string'
+
+  # get 'scaffold/description:text'
+
+  # root :to => 'posts#index'
+  root 'posts#index'
+
+  # resources :posts
+#get 'script/index' => 'script#index'
+#get 'landing/index' => 'landing#index'
+  #root 'script#index'
+  
+end
